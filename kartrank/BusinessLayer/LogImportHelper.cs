@@ -11,8 +11,8 @@ namespace kartrank.BusinessLayer
 {
     public static class LogImportHelper
     {
-        private const string LOG_ENTRY_FILE_PATH = Path.Combine(Directory.GetCurrentDirectory(), "kart-rank.log");
-        private const CultureInfo PT_BR_CULTURE_INFO = CultureInfo.GetCultureInfo("pt-BR");
+        private static string LOG_ENTRY_FILE_PATH = Path.Combine(Directory.GetCurrentDirectory(), "kart-rank.log");
+        private static CultureInfo PT_BR_CULTURE_INFO = CultureInfo.GetCultureInfo("pt-BR");
 
 
         public static List<LogEntry> Import()
@@ -22,8 +22,12 @@ namespace kartrank.BusinessLayer
 
         public static LogEntry DeserializeLine(string logEntryLine)
         {
+            if (String.IsNullOrEmpty(logEntryLine))
+                throw new ArgumentException("LogEntryLine can't be null or empty string.");
+
             try
             {
+
                 LogEntry le = new LogEntry();
                 
                 var parts = logEntryLine.Split((char[])null, StringSplitOptions.RemoveEmptyEntries);

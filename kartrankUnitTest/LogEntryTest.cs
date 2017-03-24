@@ -1,4 +1,5 @@
 ﻿using System;
+using kartrank.BusinessLayer;
 using kartrank.EntityLayer;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -16,10 +17,12 @@ namespace kartrankUnitTest
         string LogEntry_Invalid_AverageLap_Time = "23:49:08.277 	  038 – F.MASSA		  	  1		X:02.852 			XX,275";
 
         [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
         public void LogEntry_Null_Or_Empty()
         {
             LogEntry le = new LogEntry();
-
+            le = LogImportHelper.DeserializeLine(LogEntry_Empty);
+            Assert.Fail("Test must throw ArgumentException.");
         }
     }
 }
