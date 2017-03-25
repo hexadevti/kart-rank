@@ -52,6 +52,7 @@
   <ItemGroup>
     <Compile Include="LogEntryTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RaceResultTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\kartrank\kartrank.csproj">

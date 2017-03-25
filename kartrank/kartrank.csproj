@@ -42,13 +42,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BusinessLayer\LogImportHelper.cs" />
+    <Compile Include="BusinessLayer\RaceProcess.cs" />
+    <Compile Include="EntityLayer\PilotStats.cs" />
+    <Compile Include="EntityLayer\RaceResultItem.cs" />
     <Compile Include="EntityLayer\LogEntry.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="kart-rank.log" />
+    <None Include="kart-rank.log">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DataLayer\" />
