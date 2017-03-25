@@ -1,0 +1,26 @@
+Observações:
+
+
+1) A aplicação foi desenvolvida em command prompt.
+
+2) Para saber as opções, executá-lo com o parametro '?' ou 'help'.
+
+3) Nos logs de exemplo a Hora dos logs não foram apresentadas de forma crescente. Sendo assim, acredito que haja algo de errado na geração dessa hora dos logs. Portanto não levei em consideração esse campo nos cálculos, apesar de fazer a importação.
+
+4) Não fui muito a fundo na melhoria da apresentação da informação por falta de tempo, mas poderia ter feito de forma mais bem apresentada. 
+
+5) Criei alguns métodos de testes para exemplificar os testes unitários, porém tenho consciência que poderiam ter detalhado mais a fundo os testes unitários. Também não aprofundei muito por falta de tempo.
+
+6) Adotei a estratégia de colocar tratamento de erro apenas na camada de apresentação (Program.cs) pela simplicidade da aplicação. Mas poderia ter tratamentos de erros por camadas, caso fosse necessário logar em ambientes ou contextos diferentes. 
+
+7) Usei Linq para fazer os cálculos da forma mais reduzida possível, mas sei que as vezes essa solução não necessáriamente é a melhor pela questão da manutenção do código.
+
+8) Percebi que o nome do F.MASSA tinha um registro incorreto, portanto utilizei o ID do piloto como referência de consulta.
+
+9) Tive uma dúvida a respeito do requisito: "A corrida termina quando o primeiro colocado completa 4 voltas". Não sabia se a corrida seria interrompida após o primeiro colocado completar as 4 voltas ou se seria uma corrida "normal". Adotei a "corrida normal" quando a corrida termina após todos completarem 3 voltas, exceto aqueles acidentados.
+
+Qualquer dúvida entrar em contato:
+
+Luciano Faria - 11-992359798
+
+
